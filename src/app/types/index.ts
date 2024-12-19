@@ -41,5 +41,5 @@ export interface navItems {
     icon: string
     label: string
     type: string
-    isActive: Boolean
+    isActive: boolean
 }
