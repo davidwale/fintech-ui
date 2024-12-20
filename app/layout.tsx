@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CRM Dashboard',
-  description: 'A modern CRM dashboard built with Next.js',
+  title: 'CRM Dashboard - David Oyewale',
+  description: 'CRM Dashboard UI assessment by David Oyewale',
 }
 
 export default function RootLayout({
