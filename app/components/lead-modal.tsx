@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { XMarkIcon, PencilIcon, PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { Lead } from '../types'
 import { AgentSkillModal } from './agent-skill-modal'
+import Image from 'next/image'
 
 interface LeadModalProps {
     lead: Lead
@@ -27,11 +28,14 @@ export function LeadModal({ lead, onClose }: LeadModalProps) {
                 <div className="p-4 shadow-xl">
                     {/* Header */}
                     <div className="flex items-start gap-3">
-                        <img
-                            src={lead.avatar || '/image.png'}
-                            alt=""
-                            className="h-12 w-12 rounded-full"
-                        />
+                        <span className="h-12 w-12 rounded-full">
+                            <Image
+                                src={lead.avatar || '/image.png'}
+                                alt="avatar"
+                                width={100}
+                                height={100}
+                            />
+                        </span>
                         <div>
                             <h2 className="text-lg font-semibold flex items-center gap-2">
                                 {lead.name}
@@ -128,7 +132,9 @@ export function LeadModal({ lead, onClose }: LeadModalProps) {
                         {/* Tags */}
                         <div className="mt-4 flex items-center gap-3">
                             <div className="flex -space-x-2">
-                                <img src="/placeholder.svg?height=24&width=24" className="h-6 w-6 rounded-full ring-2 ring-white" />
+                                <span className="h-6 w-6 rounded-full ring-2 ring-white">
+                                    <Image src="/placeholder.svg?height=24&width=24" alt='placeholer' width={100} height={100} />
+                                </span>
                                 <div className="h-6 w-6 rounded-full bg-blue-600 ring-2 ring-white flex items-center justify-center">
                                     <span className="text-xs text-white">+2</span>
                                 </div>

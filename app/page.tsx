@@ -4,6 +4,7 @@ import { LeadsList } from './components/leads-list'
 import { ActivityCard } from './components/activity-card'
 import { ProgressBar } from './components/progress-bar'
 import DashboardLayout from './components/dashboard-layout'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start justify-between mb-6">
             <div className="flex items-start gap-3">
               <div className="h-8 w-8 rounded-full flex items-center justify-center">
-                <img src="/Copilot-Logo.svg" alt="co-pilot" />
+                <Image src="/Copilot-Logo.svg" alt="co-pilot" width={100} height={100} />
               </div>
               <div>
                 <h1 className="text-lg md:text-xl font-semibold flex items-center gap-2">

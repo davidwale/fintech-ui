@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { Lead } from '../types'
 import { LeadModal } from './lead-modal'
+import Image from 'next/image'
 
 interface LeadsListProps {
     leads: Lead[]
@@ -40,11 +41,14 @@ export function LeadsList({ leads }: LeadsListProps) {
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                     />
                 </svg>
-                <img
-                    src="/Copilot-Logo.svg"
-                    alt="co-pilot"
-                    className="absolute right-3 top-2 h-6"
-                />
+                <span className="absolute right-3 top-2 h-6">
+                    <Image
+                        src="/Copilot-Logo.svg"
+                        alt="co-pilot"
+                        width={30}
+                        height={30}
+                    />
+                </span>
             </div>
 
 

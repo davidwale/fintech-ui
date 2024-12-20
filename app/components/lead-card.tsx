@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface LeadCardProps {
     name: string
     position: string
@@ -13,11 +15,14 @@ export function LeadCard({ name, position, company, avatar, action, description,
         <div className="bg-white rounded-lg border border-gray-200 p-4">
             <div className="flex items-start justify-between">
                 <div className="flex gap-3">
-                    <img
-                        src={avatar}
-                        alt=""
-                        className="w-10 h-10 rounded-full"
-                    />
+                    <span className="w-10 h-10 rounded-full">
+                        <Image
+                            src={avatar}
+                            alt="avatar"
+                            width={100}
+                            height={100}
+                        />
+                    </span>
                     <div>
                         <h3 className="font-medium">{name}</h3>
                         <p className="text-sm text-gray-500">{position} • {company}</p>
