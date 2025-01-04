@@ -16,8 +16,7 @@ export function TransactionCard({
     type,
     merchant,
     category,
-    date,
-    status
+    date
 }: TransactionCardProps) {
     return (
         <div className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">

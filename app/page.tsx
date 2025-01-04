@@ -23,7 +23,7 @@ export default function Home() {
                   Hi {user?.name}, <span className="text-blue-600"> {mockFinanceData.achieved}% </span> of spending goal reached
                 </h1>
                 <p className="text-gray-500 text-sm md:text-lg mt-1">
-                  You're maintaining good financial health
+                  You&apos;re maintaining good financial health
                 </p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
           <SpendingProgressBar segments={mockFinanceData.segments} className="mt-4" />
 
           <p className="mt-6 text-sm text-gray-600">
-            Your spending patterns show you're on track with your financial goals. Here are your recent transactions.
+            Your spending patterns show You&apos;re on track with your financial goals. Here are your recent transactions.
           </p>
 
           <div className="mt-6 grid md:grid-cols-2 gap-4">

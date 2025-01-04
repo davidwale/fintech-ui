@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { LayoutDashboard, Receipt, Wallet, ChevronDown, Menu, X, CreditCard, User } from 'lucide-react'
+import { LayoutDashboard, Receipt, Wallet, Menu, X, CreditCard, User } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 

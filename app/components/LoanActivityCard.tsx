@@ -9,7 +9,6 @@ interface LoanActivityCardProps {
 }
 
 export function LoanActivityCard({
-    type,
     title,
     amount,
     date,

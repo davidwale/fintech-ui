@@ -2,7 +2,7 @@ import { useState, useContext } from 'react'
 import { UserContext } from '../context/UserContext'
 
 export default function LoanManagement() {
-    const { user, loans, requestLoan } = useContext(UserContext)
+    const { loans, requestLoan } = useContext(UserContext)
     const [amount, setAmount] = useState('')
     const [tenure, setTenure] = useState('')
     const [purpose, setPurpose] = useState('')
