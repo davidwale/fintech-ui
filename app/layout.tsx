@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { UserProvider } from './context/UserContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CRM Dashboard - David Oyewale',
-  description: 'CRM Dashboard UI assessment by David Oyewale',
+  title: 'Simbrella Fintech Dashboard - David Oyewale',
+  description: 'Dashboard UI assessment by David Oyewale',
 }
 
 export default function RootLayout({
@@ -17,11 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-gray-100">
-          {children}
-        </div>
+        <UserProvider>
+          <div className="bg-gray-100">
+            {children}
+          </div>
+        </UserProvider>
       </body>
     </html>
   )
 }
-

@@ -1,45 +1,36 @@
-export interface Lead {
-    id: string
+export interface User {
+    id: number
     name: string
-    topic: string
-    title: string
-    company: string
-    avatar?: string
-    linkedIn?: boolean
-    message: string
-    reasonsForPick: string[]
-    isDecisionMaker: boolean
-    dealValue: string
-    intent: string
-    about: string
-    status: string
-    createdOn: string
-    tags: Array<{
-        icon: string
-        label: string
-        count?: number
-    }>
+    avatar: string
+    email: string
+    phone: string
+    address: string
+    accountType: string
+    joinDate: string
+    kycStatus: string
+    twoFactorEnabled: boolean,
+    notificationPreferences: {
+        email: boolean,
+        push: boolean,
+        sms: boolean
+    }
+    accountBalance: number
+    recentTransactions: Transaction[]
 }
 
+export interface Loan {
+    id?: number
+    amount: number
+    tenure: number
+    purpose: string
+    status?: string
+}
 
-export interface Activity {
-    id: string
-    title: string
-    company: string
-    value: string
-    daysToClose: number
+export interface Transaction {
+    id: number
+    date: string
+    description: string
+    amount: number
     type: string
 }
 
-export interface Goal {
-    current: number
-    target: number
-    percentage: number
-}
-
-export interface navItems {
-    icon: string
-    label: string
-    type: string
-    isActive: boolean
-}
