@@ -5,7 +5,7 @@ This is a UI for a Fintech Application User Dashboard.
 
 # Clone the repository
 git clone https://github.com/davidwale/fintech-ui.git
-cd 
+
 
 # Install dependencies
 npm install
