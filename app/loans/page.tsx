@@ -66,7 +66,7 @@ export default function Loans() {
 
                         {/* Tabs */}
                         <div className="border-b border-gray-200 mb-6">
-                            <nav className="flex gap-4">
+                            <nav className="flex gap-0 md:gap-4">
                                 {['all', 'active', 'pending', 'completed'].map((tab) => (
                                     <button
                                         key={tab}

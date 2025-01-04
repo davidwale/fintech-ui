@@ -25,8 +25,7 @@ export function Navbar() {
         <div className="h-14 bg-white border-b border-gray-200 flex items-center shadow-lg rounded-2xl text-xs mt-4 mx-6 px-4 gap-2 relative">
             {/* Left section - Always visible */}
             <div className="flex items-center gap-2 min-w-[100px]">
-                <span className="text-sm text-gray-500">My Accounts</span>
-                <ChevronDown className="h-4 w-4 text-gray-500" />
+                <span className="text-sm text-gray-600 font-bold">Simbrella</span>
             </div>
 
             {/* Mobile menu button */}

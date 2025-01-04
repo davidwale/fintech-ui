@@ -6,7 +6,6 @@ import { TransactionCard } from './components/TransactionCard'
 import { LoanActivityCard } from './components/LoanActivityCard'
 import { SpendingProgressBar } from './components/SpendingProgressBar'
 import { RecentTransactionsList } from './components/RecentTransactionsList'
-import Image from 'next/image'
 import DashboardLayout from './components/dashboard-layout'
 import { UserContext } from './context/UserContext'
 
@@ -19,26 +18,11 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm border w-full border-gray-200 p-4">
           <div className="flex flex-col md:flex-row items-start justify-between mb-6">
             <div className="flex items-start gap-3">
-              {user ? (
-                <>
-                  <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
-                    <Image
-                      src={user.avatar}
-                      alt="profile"
-                      width={32}
-                      height={32}
-                      className="rounded-full"
-                    />
-                  </div>
-                </>
-              ) : (
-                null
-              )}
               <div>
-                <h1 className="text-lg md:text-xl font-semibold flex items-center gap-2">
-                  Hi {user?.name}, <span className="text-blue-600">{mockFinanceData.achieved}%</span> of spending goal reached
+                <h1 className="text-base md:text-xl font-semibold">
+                  Hi {user?.name}, <span className="text-blue-600"> {mockFinanceData.achieved}% </span> of spending goal reached
                 </h1>
-                <p className="text-gray-500 mt-1">
+                <p className="text-gray-500 text-sm md:text-lg mt-1">
                   You're maintaining good financial health
                 </p>
               </div>

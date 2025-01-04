@@ -58,7 +58,7 @@ export default function Account() {
 
                                 {/* Tabs */}
                                 <div className="border-b border-gray-200 mt-6">
-                                    <nav className="flex gap-4">
+                                    <nav className="flex gap-6 sm:gap:4">
                                         {tabs.map((tab) => (
                                             <button
                                                 key={tab.id}
@@ -69,11 +69,12 @@ export default function Account() {
                                                     }`}
                                             >
                                                 <tab.icon className="w-4 h-4" />
-                                                {tab.label}
+                                                <span className="hidden sm:inline">{tab.label}</span>
                                             </button>
                                         ))}
                                     </nav>
                                 </div>
+
 
                                 {/* Tab Content */}
                                 <div className="mt-6">

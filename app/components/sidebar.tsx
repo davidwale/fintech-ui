@@ -25,8 +25,8 @@ export function Sidebar({ expanded, setExpanded }: SidebarProps) {
 
     return (
         <nav
-            className={`fixed left-0 top-0 h-full bg-white border-r border-gray-200 
-        transition-all duration-300 ease-in-out z-50 flex flex-col
+            className={`fixed left-0 hidden top-0 h-full bg-white border-r border-gray-200 
+        transition-all duration-300 ease-in-out z-50 md:flex flex-col
         ${expanded ? 'w-64 shadow-lg' : 'w-16'}`}
         >
             <div className="sticky top-0 bg-gray-50/75 border-b border-gray-200 p-3">
@@ -70,12 +70,12 @@ export function Sidebar({ expanded, setExpanded }: SidebarProps) {
                         className={`flex items-center gap-3 p-2 rounded-lg hover:bg-gray-100 transition-colors
             ${pathname === '/account' ? 'bg-gray-100' : ''}`}
                     >
-                        <div className="relative">
+                        <div>
                             <Image
                                 src={user.avatar}
                                 alt={user.name}
                                 width={32}
-                                height={32}
+                                height={30}
                                 className="rounded-full"
                             />
                             <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-white rounded-full"></div>

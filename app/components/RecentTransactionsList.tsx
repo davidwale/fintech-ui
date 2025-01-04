@@ -1,4 +1,5 @@
 import { ArrowUpRight, ArrowDownRight } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 interface Transaction {
     id: number
@@ -14,11 +15,15 @@ interface RecentTransactionsListProps {
 }
 
 export function RecentTransactionsList({ transactions }: RecentTransactionsListProps) {
+    const router = useRouter()
+
     return (
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="text-lg font-semibold">Recent Transactions</h2>
-                <button className="text-sm text-blue-600 hover:text-blue-700">
+                <button
+                    onClick={() => router.push('/transactions')}
+                    className="text-sm text-blue-600 hover:text-blue-700">
                     View all transactions
                 </button>
             </div>
