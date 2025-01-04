@@ -97,7 +97,6 @@ export default function Loans() {
                                             </span>
                                         </div>
                                         <button
-                                            onClick={() => router.push(`/loans/${loan.id}`)}
                                             className="text-blue-600 hover:text-blue-700"
                                         >
                                             <ChevronRight className="w-5 h-5" />
