@@ -39,16 +39,10 @@ interface Transaction {
 
 interface UserContextType {
     user: User | null
-    loans: Loan[]
-    transactions: Transaction[]
-    requestLoan: (loan: Loan) => void
 }
 
 export const UserContext = createContext<UserContextType>({
     user: null,
-    loans: [],
-    transactions: [],
-    requestLoan: () => { },
 })
 
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -77,7 +71,7 @@ export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
 
     return (
-        <UserContext.Provider value={{ user, loans, transactions, requestLoan }}>
+        <UserContext.Provider value={{ user }}>
             {children}
         </UserContext.Provider>
     )

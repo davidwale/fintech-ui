@@ -31,6 +31,7 @@ export const mockUserData = {
         { id: 2, date: '2023-05-02', description: 'Rent', amount: 10000, type: 'debit' },
         { id: 3, date: '2023-05-03', description: 'Groceries', amount: 10050, type: 'debit' },
     ],
+
 }
 
 export const mockTransactions = [

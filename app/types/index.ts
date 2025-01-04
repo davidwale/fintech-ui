@@ -16,6 +16,9 @@ export interface User {
     }
     accountBalance: number
     recentTransactions: Transaction[]
+    loans?: object[]
+    transactions?: object[]
+    requestLoan?: () => void
 }
 
 export interface Loan {
